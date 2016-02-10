@@ -18,7 +18,6 @@ import org.powermock.reflect.Whitebox;
 import org.springframework.context.ApplicationContext;
 
 @RunWith(PowerMockRunner.class)
-//@PrepareForTest({AMMainWindow.class})
 public class AMMainWindowTests {
     @Mock
     ApplicationContext ctx;
