@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.hopto.gamb</groupId>
+    <artifactId>am-domain</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>AM Store am-domain</name>
+    <url>http://gamb.hopto.org</url>
+    <developers>
+        <developer>
+            <id>kekkonen</id>
+            <name>UKK</name>
+            <email>kekkonen@kekkonen.fi</email>
+            <organization>Soviet Finland</organization>
+        </developer>
+    </developers>
+
+    <parent>
+          <groupId>org.hopto.gamb</groupId>
+          <artifactId>am-build</artifactId>
+          <version>1.0</version>
+          <relativePath>../am-build/pom.xml</relativePath>
+    </parent>
+
+    <dependencies>
+        <!-- COMPILE SCOPE -->	
+        <dependency>
+              <groupId>commons-beanutils</groupId>
+              <artifactId>commons-beanutils</artifactId>
+              <type>jar</type>
+        </dependency>
+
+        <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+        </dependency>	
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>   
+        <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+        </dependency>        
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+                 	
+    </dependencies>
+    <build>
+        <plugins>
+        </plugins>
+    </build>
+</project>

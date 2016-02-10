@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.hopto.gamb</groupId>
+    <artifactId>am-application</artifactId>
+    <name>AM Store am-application</name>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+    <developers>
+        <developer>
+            <id>kekkonen</id>
+            <name>UKK</name>
+            <email>kekkonen@kekkonen.fi</email>
+            <organization>Soviet Finland</organization>
+        </developer>
+    </developers>	
+
+    <parent>
+        <groupId>org.hopto.gamb</groupId>
+        <artifactId>am-build</artifactId>
+        <version>1.0</version>
+        <relativePath>../am-build/pom.xml</relativePath>
+    </parent>
+
+    <repositories>
+        <repository>
+           <id>vaadin-addons</id>
+           <url>http://maven.vaadin.com/vaadin-addons</url>
+        </repository>
+    </repositories>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-bom</artifactId>
+                <version>7.5.5</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <properties>
+	<start-class>org.hopto.gamb.AmStoreApplication</start-class>
+    </properties>
+
+    <dependencies>	
+        <!-- COMPILE SCOPE -->
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-spring-boot-starter</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.hopto.gamb</groupId>
+            <artifactId>am-domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- TEST SCOPE -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+           <plugin>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-maven-plugin</artifactId>
+           </plugin>
+        </plugins>
+    </build>
+</project>
