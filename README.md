@@ -12,4 +12,11 @@ Used technologies:
 - JUnit
 - PowerMock/EasyMock
 
+Modules: 
+
+AM-DOMAIN (Total coverage: 98,7%)
+- JAR domain package for rest service calls and DTOs
+ 
+AM-APPLICATION (Total coverage: ??,?%)
+- Spring boot application entrypoint, Vaadin UI. 
 
